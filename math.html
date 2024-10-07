@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+ <title>Looping Computation done by Veera.</title>
+<body>
+<h1>Veeranjaneyulu Palaka figures out</h1>
+<h3>Getting input</h3>
+   <label for="firstNumber">Enter a number:</label>
+    <input type="number" id="firstNumber" value="2">
+    <label for="secondNumber">Enter a number:</label>
+    <input type="number" id="secondNumber" value="12">
+    <button onclick="powerSum()">Compute</button>
+    <p id="result"></p>
+    <script>
+        function powerSum() {
+            const first = parseInt(document.getElementById('firstvalue').value);
+            const second = parseInt(document.getElementById('secondvalue').value);
+            let sum = 0;
+            for (let i = 0; i < first; i++) {
+                sum += second ** i;  
+            }
+            document.getElementById('result').innerHTML =
+                `Sum of ${first} powers with base ${second} is ${sum}`;
+        }
+    </script>
+</body>
+</html>
