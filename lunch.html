@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+ <title>Lunch </title>
+<body>
+
+<h2>Veeranjaneyulu Palaka orders av lunch</h2>
+
+<form id="lunchForm">
+    <input type="checkbox" id="drink" value="drink"> Drink<br>
+    <input type="checkbox" id="side" value="side"> Side<br>
+    <input type="checkbox" id="eatIn" value="in"> Eat in<br>
+    <button type="button" onclick="startLunch()">Start a lunch order</button>
+</form>
+
+
+
+<p id="lunchResult">This text will be replaced </p>
+
+<script>
+    let yymy_lunch = {};
+
+    function startLunch() {
+    
+        my_lunch = {};
+        
+        my_lunch.drink = document.getElementById('drink').checked;
+        my_lunch.side = document.getElementById('side').checked;
+        my_lunch.in = document.getElementById('eatIn').checked;
+
+        document.getElementById('lunchResult').innerHTML = JSON.stringify(my_lunch);
+        
+    }
+</script>
+
+
+</body>
+</html> 
